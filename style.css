@@ -56,54 +56,83 @@ th, td {
 
 
 <!--kontak-->
- main {
-      padding: 20px;
-    }
+ body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3e8d6;
+}
 
-    form {
-      width: 100%;
-      max-width: 800px;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin: auto;
-    }
+main {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
 
-    table {
-      width: 100%;
-    }
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    td {
-      padding: 8px;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+td {
+  padding: 10px 0;
+  vertical-align: top;
+}
 
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      border: none;
-      background-color: #c480a3;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
-    button:hover {
-      background-color: #a95d85;
-    }
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
-    .success-message {
-      color: green;
-      margin-top: 15px;
-      display: none;
-    }
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #c480a3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #a95d85;
+}
+
+.success-message {
+  color: green;
+  margin-top: 15px;
+  display: none;
+}
+
+@media (max-width: 600px) {
+  table,
+  td {
+    display: block;
+    width: 100%;
+  }
+}
 
 
     <!--keranjang-->
