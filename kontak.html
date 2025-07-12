@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Claudya Sheva</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      padding: 20px;
+    }
+
+    form {
+      max-width: 1000px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #c480a3;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a95d85;
+    }
+
+    .success-message {
+      color: green;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>claudya sheva</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="produk.html">Produk</a>
+    <a href="keranjang.html">Keranjang</a>
+    <a href="kontak.html" class="active">Kontak</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Hubungi Kami</h2>
+  <form id="kontakForm">
+    <table>
+      <tr>
+        <td><label for="nama">Nama</label></td>
+        <td><input type="text" id="nama" name="nama" required></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+      </tr>
+      <tr>
+        <td><label for="whatsapp">No. HP / WA</label></td>
+        <td><input type="tel" id="whatsapp" name="whatsapp" required></td>
+      </tr>
+      <tr>
+        <td><label for="pesan">Pesan</label></td>
+        <td><textarea id="pesan" name="pesan" rows="4" required></textarea></td>
+      </tr>
+    </table>
+    <button type="submit">Kirim</button>
+    <p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2025 Claudya Sheva.</p>
+</footer>
+
+<script>
+  document.getElementById("kontakForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("successMessage").style.display = "block";
+    this.reset(); // mengosongkan form
+  });
+</script>
+
+</body>
+</html>
